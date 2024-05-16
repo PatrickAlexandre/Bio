@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Your True Self</title>
+
+    <!--W3.CSS+Font Awesome+Chart.js-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajout des couleurs en fonction du pourcentage de dépenses */
+        .legendary { color: #ff8000; }        
+        .epic { color: #a335ee; }
+        .rare { color: #0070dd; }
+        .uncommon { color: #1eff00; }
+        .common { color: #ffffff; }
+        .poor { color: #9d9d9d; }
+        .artifact { color: #e6cc80; }
+    </style>    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <nav class="w3-hide-small">
+        <a id="openModalBtn" class="w3-bar-item w3-right w3-padding-large w3-hover-white" title="Biometrics">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+        </a>
+
+        <div class="nav-buttons w3-hide">
+            <button class="w3-button w3-blue w3-margin-right" onclick="loginWith('Facebook')">
+                <i class="fab fa-facebook-f"></i> Login avec Facebook
+            </button>
+            <button class="w3-button w3-red w3-margin-right" onclick="loginWith('Google')">
+                <i class="fab fa-google"></i> Login avec Google
+            </button>
+        </div>
+        <a href="https://modl.w3spaces.com/cognitive/biases.html" class="w3-button w3-green w3-margin-right w3-hide">
+            <i class="fas fa-atom"></i> Cognitive
+        </a>
+    </nav>
+
+
+    <!-- Page Container -->
+    <div class="w3-container w3-content">    
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+        <!-- Profile -->
+        <div class="w3-card w3-round w3-white">
+            <div class="w3-container">
+            <h4 class="w3-center">Bio</h4>
+            <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+            <hr>
+            <div class="progress-container">
+                <div class="progress-bar" id="mainProgressBar">0%</div>
+            </div>            
+            <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
+            <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
+            </div>
+        </div>
+        <br>
+        
+        <!-- Accordion -->
+        <div class="w3-card w3-round">
+            <div class="w3-white">
+            <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
+            <div id="Demo1" class="w3-hide w3-container">
+                <p>Some text..</p>
+            </div>
+            <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
+            <div id="Demo2" class="w3-hide w3-container">
+                <p>Some other text..</p>
+            </div>
+            <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+            <div id="Demo3" class="w3-hide w3-container">
+            <div class="w3-row-padding">
+            <br>
+            <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
+            </div>
+            </div>
+            </div>
+            </div>      
+        </div>
+        <br>
+        
+        <!-- Interests --> 
+        <div class="w3-card w3-round w3-white w3-hide-small">
+            <div class="w3-container">
+            <p>Interests</p>
+            <p>
+                <span class="w3-tag w3-small w3-theme-d5">News</span>
+                <span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
+                <span class="w3-tag w3-small w3-theme-d3">Labels</span>
+                <span class="w3-tag w3-small w3-theme-d2">Games</span>
+                <span class="w3-tag w3-small w3-theme-d1">Friends</span>
+                <span class="w3-tag w3-small w3-theme">Games</span>
+                <span class="w3-tag w3-small w3-theme-l1">Friends</span>
+                <span class="w3-tag w3-small w3-theme-l2">Food</span>
+                <span class="w3-tag w3-small w3-theme-l3">Design</span>
+                <span class="w3-tag w3-small w3-theme-l4">Art</span>
+                <span class="w3-tag w3-small w3-theme-l5">Photos</span>
+            </p>
+            </div>
+        </div>
+        <br>
+        
+        <!-- Alert Box -->
+        <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+            <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+            <i class="fa fa-remove"></i>
+            </span>
+            <p><strong>Hey!</strong></p>
+            <p>People are looking at your profile. Find out who.</p>
+        </div>
+        
+        <!-- End Left Column -->
+        </div>
+        
+        <!-- Middle Column -->
+        <div class="w3-col m7">
+        
+        <div class="w3-row-padding">
+            <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container w3-padding">
+                <h6 class="w3-opacity">Social Media template by w3.css</h6>
+                <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
+                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+            <span class="w3-right w3-opacity">1 min</span>
+            <h4>John Doe</h4><br>
+            <hr class="w3-clear">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+                </div>
+                <div class="w3-half">
+                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
+            </div>
+            </div>
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        </div>
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+            <span class="w3-right w3-opacity">16 min</span>
+            <h4>Jane Doe</h4><br>
+            <hr class="w3-clear">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        </div>  
+
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+            <span class="w3-right w3-opacity">32 min</span>
+            <h4>Angie Jane</h4><br>
+            <hr class="w3-clear">
+            <p>Have you seen this?</p>
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        </div> 
+        
+        <!-- End Middle Column -->
+        </div>
+        
+        <!-- Right Column -->
+        <div class="w3-col m2">
+        <div class="w3-card w3-round w3-white w3-center">
+            <div class="w3-container">
+            <p>Upcoming Events:</p>
+            <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
+            <p><strong>Holiday</strong></p>
+            <p>Friday 15:00</p>
+            <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+            </div>
+        </div>
+        <br>
+        
+        <div class="w3-card w3-round w3-white w3-center">
+            <div class="w3-container">
+            <p>Friend Request</p>
+            <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+            <span>Jane Doe</span>
+            <div class="w3-row w3-opacity">
+                <div class="w3-half">
+                <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+                </div>
+                <div class="w3-half">
+                <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <br>
+        
+        <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+            <p>ADS</p>
+        </div>
+        <br>
+        
+        <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+            <p><i class="fa fa-bug w3-xxlarge"></i></p>
+        </div>
+        
+        <!-- End Right Column -->
+        </div>
+        
+    <!-- End Grid -->
+    </div>
+    
+    <!-- End Page Container -->
+    </div>
+    <br><hr><br>
+
+    <div class="w3-container section" id="mbti-section">
+        <h2>Classe</h2>
+        <!--Sélecteur de Types MBTI (Total = 16)-->
+        <label for="mbti-select">Specialisation:</label>
+        <select id="mbti-select">
+            <option value="ISTJ">ISTJ 📚</option>
+            <option value="ISFJ">ISFJ 🌼</option>
+            <option value="INFJ">INFJ 🌟</option>
+            <option value="INTJ">INTJ 🧠</option>
+            <option value="ISTP">ISTP 🛠️</option>
+            <option value="ISFP">ISFP 🎨</option>
+            <option value="INFP">INFP 💭</option>
+            <option value="INTP">INTP 🔍</option>
+            <option value="ESTP">ESTP ⚡</option>
+            <option value="ESFP">ESFP 🎉</option>
+            <option value="ENFP">ENFP 🌈</option>
+            <option value="ENTP">ENTP 💡</option>
+            <option value="ESTJ">ESTJ 📊</option>
+            <option value="ESFJ">ESFJ 💖</option>
+            <option value="ENFJ">ENFJ 🌍</option>
+            <option value="ENTJ">ENTJ 🎯</option>
+        </select>
+        <div id="mbti-info" style="margin-top: 20px;">
+            <!-- MBTI information will be displayed here -->
+        </div>
+    </div>
+
+    <div id="metabolismModal" class="modal"><!--🔒☣️Bio métriques-->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="w3-container section">
+                <h2>🧪 Biométriques</h2>
+                <form id="mb-form" class="w3-container">
+                    <label for="dob">Date de Naissance:</label>
+                    <input type="date" id="dob" name="dob" class="w3-input w3-border" required><br><br>
+
+                    <label for="weight">Poids (kg):</label>
+                    <input type="number" id="weight" name="weight" class="w3-input w3-border" value="70" required><br><br>
+
+                    <label for="height">Taille (cm):</label>
+                    <input type="number" id="height" name="height" class="w3-input w3-border" value="170" required><br><br>
+
+                    <label for="activity-level">Votre profil:</label>
+                    <select id="activity-level" name="activity-level" class="w3-select w3-border" required>
+                        <option value="1.2">Sédentaire (Aucun exercice quotidien ou presque) MB x 1,2</option>
+                        <option value="1.375">Légèrement actif (Exercice physique 1 à 3 fois par semaine) MB x 1,375</option>
+                        <option value="1.55">Actif (Exercice physique 3 à 5 fois par semaine) MB x 1,55</option>
+                        <option value="1.725">Très actif (Exercice quotidien ou soutenu) MB x 1,725</option>
+                        <option value="1.9">Extrêmement actif (Travail physique ou grand sportif) MB x 1,9</option>
+                    </select><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container section" id="data-visualization-section">
+        <h2>Traits</h2><!--Visualisation de Données-->
+        <div class="grid-container" id="chromosomes-grid"></div>
+        <p id="mb-result"></p>
+    </div>
+
+    <div class="w3-container section" id="coicop-section">
+        <h2>Ressources</h2><!--Dépenses COICOP (TOTAL = 12)--> <!--ADD COULEURS Rareté item (exemple : legendaire, violet, bleu, vert, blanc, gris-->
+        <table id="coicop-table">
+            <thead>
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Dépenses (%)</th>
+                </tr>
+            </thead>
+<tbody>
+    <tr>
+        <td><i class="fas fa-utensils icon"></i> 1. Alimentation et boissons non alcoolisées</td>
+        <td class="epic">10%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-wine-bottle icon"></i> 2. Boissons alcoolisées, tabac et narcotiques</td>
+        <td class="common">5%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-tshirt icon"></i> 3. Articles d'habillement et chaussures</td>
+        <td class="rare">8%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-home icon"></i> 4. Logement, eau, électricité, gaz et autres combustibles</td>
+        <td class="artifact">25%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-couch icon"></i> 5. Ameublement, équipement ménager et entretien courant de la maison</td>
+        <td class="common">6%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-heartbeat icon"></i> 6. Santé</td>
+        <td class="uncommon">7%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-car icon"></i> 7. Transports</td>
+        <td class="legendary">13%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-phone icon"></i> 8. Communications</td>
+        <td class="poor">3%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-theater-masks icon"></i> 9. Loisirs et culture</td>
+        <td class="epic">10%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-graduation-cap icon"></i> 10. Éducation</td>
+        <td class="uncommon">5%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-concierge-bell icon"></i> 11. Restaurants et hôtels</td>
+        <td class="common">5%</td>
+    </tr>
+    <tr>
+        <td><i class="fas fa-gifts icon"></i> 12. Biens et services divers</td>
+        <td class="common">4%</td>
+    </tr>
+</tbody>
+
+
+        </table>
+    </div>
+
+    <div class="w3-container section w3-hide" id="life-expectancy-section">
+        <h2>Espérance de Vie Restante</h2>
+        <div class="w3-margin-bottom">
+            <label>Femmes:</label>
+            <div class="w3-light-grey">
+                <div id="lifeExpectancyFemale" class="w3-container w3-blue" style="width:0%">0 ans</div>
+            </div>
+        </div>
+        <div>
+            <label>Hommes:</label>
+            <div class="w3-light-grey">
+                <div id="lifeExpectancyMale" class="w3-container w3-green" style="width:0%">0 ans</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w3-hide">
+        <canvas id="myChart"></canvas>
+    </footer>
+
+</body>
+</html>
