@@ -53,7 +53,6 @@ a.w3-button:hover {
 
 .progress-container {
     background-color: #D3D3D3;
-    border-radius: 25px;
     overflow: hidden;
     margin-left: 20px;
 }
@@ -61,7 +60,7 @@ a.w3-button:hover {
 .progress-bar {
     height: 25px;
     width: 0;
-    background-color: #32CD32;
+
     text-align: center;
     line-height: 25px;
     color: white;
@@ -128,21 +127,20 @@ a.w3-button:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 5px;
 }
 
 .grid-item {
-    background-color: #FFD700;
-    border: 2px solid #000;
-    padding: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Ajoute une ombre interne */
+    padding: 1px;
     text-align: center;
-    font-size: 18px;
-    border-radius: 10px;
+    font-size: 10px;
+    border-radius: 8px;
 }
 
 .grid-item i {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 #myChart {
@@ -155,14 +153,12 @@ a.w3-button:hover {
 table#coicop-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+
 }
 
 table#coicop-table th,
 table#coicop-table td {
-    border: 2px solid #000;
-    padding: 10px;
-    text-align: left;
+
 }
 
 table#coicop-table th {
@@ -175,7 +171,6 @@ table#coicop-table td {
 }
 
 table#coicop-table .icon {
-    margin-right: 10px;
 }
 
 #life-expectancy-section .w3-light-grey {
@@ -196,4 +191,8 @@ table#coicop-table .icon {
     text-align: center;
     line-height: 25px;
     color: white;
+}
+#activity-level {
+    max-width: 100%;
+    width: 100%;
 }

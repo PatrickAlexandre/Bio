@@ -26,7 +26,7 @@
                 "fa-mars"           // Chromosome Y
             ];
 
-            const chromosomes = Array.from({ length: 22 }, (_, i) => ({ name: `Chr${i + 1}`, icon: icons[i] }));
+            const chromosomes = Array.from({ length: 22 }, (_, i) => ({ name: ``, icon: icons[i] }));
             const chromosomesGrid = document.getElementById('chromosomes-grid');
             const defaultValues = [1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3.0, 3.1, 3.2]; // Example default values
 
@@ -35,7 +35,7 @@
                 gridItem.classList.add('grid-item');
                 gridItem.innerHTML = `
                     <i class="fas ${chromosome.icon}"></i>
-                    <div>${chromosome.name}: ${defaultValues[index]}</div>
+                    <div>${chromosome.name}${defaultValues[index]}</div>
                 `;
                 chromosomesGrid.appendChild(gridItem);
             });
@@ -45,10 +45,9 @@
             chromosome23Item.classList.add('grid-item');
             chromosome23Item.innerHTML = `
                 <i class="fas fa-venus-mars"></i>
-                Chr23
                 <select id="chromosome" name="chromosome" class="w3-select w3-border">
-                    <option value="XX">♀️ X 🚺 👩</option>
-                    <option value="XY">♂️ Y 🚹 👨</option>
+                    <option value="XX" title="X🚺👩">♀️</option>
+                    <option value="XY" title="Y🚹👨">♂️</option>
                 </select>
             `;
             chromosomesGrid.appendChild(chromosome23Item);
@@ -117,8 +116,8 @@
                         'Charity Events (05:00)', 'Exclusive Parties (06:00)'
                     ],
                     datasets: [{
-                        label: 'Habitudes',
-                        data: [12, 19, 15, 10, 8, 20, 14, 16, 9, 6, 18, 21, 11, 7, 13, 5, 4, 3, 2, 1, 0, 1, 2],
+                        label: '/ DAY',
+                        data: [12, 19, 15, 10, 8, 20, 14, 16, 30, 6, 18, 21, 11, 7, 13, 5, 4, 3, 2, 1, 0, 1, 2],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
@@ -346,11 +345,11 @@
 
                 const info = mbtiInfo[selectedType];
                 const infoHtml = `
-                    <p><strong>Fonction auxiliaire :</strong> ${info.functionAux}</p>
-                    <p><strong>Fonction principale :</strong> ${info.functionPrimary}</p>
                     <p><strong>Fréquence démographique :</strong> ${info.demographic}</p>
                     <p><strong>Sous-tempérament :</strong> ${info.subtype}</p>
-                    <p><strong>Surnom :</strong> ${info.nickname}</p>
+                    <p><strong>Fonction principale :</strong> ${info.functionPrimary}</p>
+                    <p><strong>Fonction auxiliaire :</strong> ${info.functionAux}</p>
+                    <p><strong>Surnom :</strong> ${info.nickname}</p>                
                 `;
                 document.getElementById('mbti-info').innerHTML = infoHtml;
             });
@@ -376,4 +375,8 @@
                     modal.style.display = "none";
                 }
             }
+
+            // Display modal on page load
+            modal.style.display = "block";
+
         });
