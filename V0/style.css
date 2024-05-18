@@ -103,12 +103,9 @@ a.w3-button:hover {
 }
 
 .modal-content {
-    background-color: #fefefe;
     margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
     width: 80%;
-    border-radius: 15px;
 }
 
 .close {
@@ -153,24 +150,6 @@ a.w3-button:hover {
 table#coicop-table {
     width: 100%;
     border-collapse: collapse;
-
-}
-
-table#coicop-table th,
-table#coicop-table td {
-
-}
-
-table#coicop-table th {
-    background-color: #32CD32;
-    color: white;
-}
-
-table#coicop-table td {
-    background-color: #FFD700;
-}
-
-table#coicop-table .icon {
 }
 
 #life-expectancy-section .w3-light-grey {

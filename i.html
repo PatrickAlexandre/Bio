@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Unlock Your True Self</title>
+    <title>MindFit Meta, Unlock Your True Self</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,20 +19,22 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-   
+
+    <link rel="stylesheet" href="V0/style.css">
+    <script src="V0/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
 
 </head>
 <body>
-    <nav class="w3-hide-medium w3-margin-bottom">
+    <nav class="w3-margin-bottom">
         <a id="openModalBtn" class="w3-bar-item w3-center w3-padding-large w3-hover-white" title="Biometrics">
             <img src="https://i.gifer.com/6Dg.gif" class="w3-circle" style="height:23px;width:23px" alt="DNA🧬"> Login
         </a>
 
-        <i class="epic w3-hide-medium" >"Tout ce qui est mesurable peut être amélioré."</i>
+        <blockquote>
+        <i class="epic">Boostez votre succès avec des données ! Mesurez, Analysez, Progressez.</i>
+        </blockquote>
 
         <div class="nav-buttons w3-hide">
             <button class="w3-button w3-blue w3-margin-right" onclick="loginWith('Facebook')">
@@ -56,16 +58,17 @@
         <div class="w3-col m3">
 
         <!-- Profile -->
-        <div class="w3-card w3-round w3-white">
+        <div class="w3-card w3-round w3-theme-d5">
             <div class="w3-container">
                 <h4 class="w3-center">Profil</h4>
                 <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="width:106px" alt="Avatar"></p>
-                <b>Temps restant</b>
-                
                 <div class="progress-container w3-round">            
-                    <div class="progress-bar w3-blue" id="mainProgressBar">0%</div>
+                    <div class="progress-bar w3-blue" id="mainProgressBar"></div>
                 </div>
-                <hr>            <!--BUG🐞<p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>-->
+                <span class="w3-right w3-margin-left w3-hide-small">Countdown</span>
+                <hr>
+
+                            <!--BUG🐞<p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>-->
 
                 <div id="mbti-info" style="margin-top: 20px;">
                     <!-- MBTI information will be displayed here -->
@@ -129,9 +132,19 @@
             <p id="mb-result"></p>
             <hr>
             <p title="🛎️ Auction House" class="w3-text-gray" style="cursor: wait;">Auction House</p>
-
         </div>
-        
+
+
+        <div class="w3-card w3-round w3-white w3-margin"><!--Voice to POST-->
+            <div class="w3-container w3-padding">
+            <h6 class="w3-opacity">Message to Luca</h6>
+            <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
+            <button type="button" class="w3-button w3-theme"><i class="fas fa-paper-plane"></i>  Post</button>
+            </div>
+        </div>
+
+
+
         <!-- End Left Column -->
         </div>
         
@@ -139,78 +152,11 @@
         <div class="w3-col m7">
         <div class="w3-row-padding">
             <div class="w3-center"><!--POMOdoro⌛-->
-                <iframe class="w3-round" src="https://indify.co/widgets/live/progressBar/0ZLxdaOuuNO8RzKgWvbt" width="100%" height="40px" frameborder="0" scrolling="no">time</iframe>
-                <iframe class="w3-round" src="https://flocus.com/minimalist-pomodoro-timer/" width="100%" height="302px" frameborder="0">pomodoro</iframe>
-                <i class="fa fa-stopwatch-20 w3-button w3-left w3-xlarge w3-padding w3-margin-bottom"></i>
                 <canvas id="myChart"></canvas><!--[TIME] + Optimisation Habitudes/(31 D)-->
-            </div><hr>
-            <table class="w3-round w3-theme-d3">
-                <thead>
-                    <tr>
-                        <th>Catégorie</th>
-                        <th>Dépenses (%)</th>
-                    </tr>
-                </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fas fa-utensils icon"></i> 1. Alimentation et boissons non alcoolisées</td>
-                            <td class="epic">10%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-wine-bottle icon"></i> 2. Boissons alcoolisées, tabac et narcotiques</td>
-                            <td class="common">5%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-tshirt icon"></i> 3. Articles d'habillement et chaussures</td>
-                            <td class="rare">8%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-home icon"></i> 4. Logement, eau, électricité, gaz et autres combustibles</td>
-                            <td class="artifact">25%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-couch icon"></i> 5. Ameublement, équipement ménager et entretien courant de la maison</td>
-                            <td class="common">6%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-heartbeat icon"></i> 6. Santé</td>
-                            <td class="uncommon">7%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-car icon"></i> 7. Transports</td>
-                            <td class="legendary">13%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-phone icon"></i> 8. Communications</td>
-                            <td class="poor">3%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-theater-masks icon"></i> 9. Loisirs et culture</td>
-                            <td class="epic">10%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-graduation-cap icon"></i> 10. Éducation</td>
-                            <td class="uncommon">5%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-concierge-bell icon"></i> 11. Restaurants et hôtels</td>
-                            <td class="common">5%</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-gifts icon"></i> 12. Biens et services divers</td>
-                            <td class="common">4%</td>
-                        </tr>
-                    </tbody>
-            </table>
-            <div class="w3-col w3-hide m12">
-            <div class="w3-card w3-round w3-white">
-                <div class="w3-container w3-padding">
-                <h6 class="w3-opacity">Message to Luca</h6>
-                <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
-                <button type="button" class="w3-button w3-theme"><i class="fas fa-paper-plane"></i>  Send</button>
-                </div>
+                <iframe class="w3-round" src="https://flocus.com/minimalist-pomodoro-timer/" width="100%" height="315px" frameborder="0">pomodoro</iframe>
+                <iframe class="w3-hide-large" width="100%" height="315" src="https://www.youtube.com/embed/videoseries?si=BF75NmTCdUIcIDhe&amp;list=PL1nW8kmXdSU6zxdIV-tyekwCnxcVeDgqa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            </div>
+
         </div>
 
         <!--Tools🛠️
@@ -231,16 +177,8 @@
         
         <!-- Right Column -->
         <div class="w3-col m2">
-        <div class="w3-card w3-round w3-white w3-center">
-            <div class="w3-container" title="Money">
-            <p><strong>🚀 Inventaire</strong></p>
-            <img class="w3-round" src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
-            <p><button class="w3-button w3-block w3-theme-l4">Flights</button></p>
-            </div>
-        </div>
-        <hr>
-
         <div title="Pomodori Steps Historique de combat" class="w3-card w3-round w3-white w3-center">
+            <iframe class="w3-round" src="https://indify.co/widgets/live/progressBar/0ZLxdaOuuNO8RzKgWvbt" width="100%" height="40px" frameborder="0" scrolling="no">time</iframe>
             <div class="w3-container">
                 <i class="fa-solid fa-stairs"></i>
                 <p class="w3-text-gray"> Next move</p>
@@ -273,15 +211,81 @@
                     <i class="w3-text-purple">AIde</i><br>
                 </div>
 
-  
             </div>
             </div>
         </div>
-        <br>
-        
+        <div class="w3-container w3-border w3-row-padding" title="Espace">
+            <img class=" w3-round w3-center" src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
+            <p class="w3-hide"><button class="w3-button w3-block w3-theme-l4" title="Afficher les vols @Google @Skyscanner">Flights</button></p>
+        </div>
 
+        <div id="chromosomes-grid" class="grid-container w3-card"></div><!--Les chromosomes sont ajoutés ici par JavaScript-->
+        <div style="width: 100%;">
+            <h2>Ressources</h2>
+            <h4>Bourse</h4>            
+            <div id="coicop-section">
+                <table id="coicop-table" class="w3-theme-d5 w3-round w3-card"><!--COICOP{MAX:12}-->
+                    <thead>
+                        <tr>
+                            <th>Dépense</th>
+                            <th>Part</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-utensils icon"></i> 1. Alimentation et boissons non alcoolisées</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-wine-bottle icon"></i> 2. Boissons alcoolisées, tabac et narcotiques</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-tshirt icon"></i> 3. Articles d'habillement et chaussures</td>
+                            <td>8%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-home icon"></i> 4. Logement, eau, électricité, gaz et autres combustibles</td>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-couch icon"></i> 5. Ameublement, équipement ménager et entretien courant de la maison</td>
+                            <td>6%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-heartbeat icon"></i> 6. Santé</td>
+                            <td>7%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-car icon"></i> 7. Transports</td>
+                            <td>13%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-phone icon"></i> 8. Communications</td>
+                            <td>3%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-theater-masks icon"></i> 9. Loisirs et culture</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-graduation-cap icon"></i> 10. Éducation</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-concierge-bell icon"></i> 11. Restaurants et hôtels</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-gifts icon"></i> 12. Biens et services divers</td>
+                            <td>4%</td>
+                        </tr>
+                    </tbody>
 
-
+                </table>
+                <br>
+            </div>
+        </div>
         
         <!-- End Right Column -->
         </div>
@@ -293,6 +297,9 @@
 
     <!-- End Page Container -->
     </div>
+
+
+
 
     <div class="w3-center w3-row-padding w3-margin" >
         <div class="w3-button grid-item w3-round w3-padding-small" style="min-width: 26px;" title="Chr1 : Taille, intelligence"><i class="fas fa-dna"></i></div>
@@ -317,9 +324,8 @@
         <div class="w3-button grid-item w3-round w3-padding-small" style="min-width: 26px;" title="Chr20 : Epilepsie, diabète"><i class="fas fa-diagnoses"></i></div>
         <div class="w3-button grid-item w3-round w3-padding-small" style="min-width: 26px;" title="Chr21 : Syndrome, Down"><i class="fas fa-user"></i></div>
         <div class="w3-button grid-item w3-round w3-padding-small" style="min-width: 26px;" title="Chr22 : Neurofibromatose, tumeurs"><i class="fas fa-brain"></i></div>
-        <div id="venus-mars" class="w3-button grid-item w3-round w3-padding-small" style="min-width: 26px;" title="Chr23 : Sexe, genre"><i class="fas fa-venus-mars"></i></div>
+        <div class="w3-button grid-item w3-round w3-padding-small" style="min-width: 26px;" title="Chr23 : Sexe, Genre"><i class="fas fa-venus-mars"></i></div>
     </div>
-
 
 
     <div id="metabolismModal" class="modal"><!--🔒☣️Bio métriques-->
@@ -328,24 +334,22 @@
             
             <form id="mb-form" class="w3-container">
                     <!--<h2 title="Bio" contenteditable="true" class="w3-container w3-theme-l5 w3-margin-top w3-padding-16">🐲🍮  Pseudo :  ♔☹</h2>-->
-                <div class="w3-card w3-round w3-theme-l3 w3-padding-small">
+                <div class="w3-card w3-round w3-theme-l5 w3-padding">
                     <input type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
                     <input type="text" id="nom" name="nom" placeholder="Nom de famille" required><br>
                     <input type="text" id="contact" name="contact" placeholder="Numéro de mobile ou e-mail" required><br>
                     <input type="password" id="motdepasse" name="motdepasse" placeholder="Nouveau mot de passe" required><br>
                     <label for="date_naissance" class="w3-text-gray">Date de naissance</label><br>
                     <input type="date" id="dob" name="dob" required><br>
-                    <label for="femme">
-                        <input type="radio" id="femme" name="genre" value="Femme" required>
-                        <i class="fa fa-venus"></i>Femme
-                    </label>
-                    <label for="homme">
-                        <input type="radio" id="homme" name="genre" value="Homme" required>
-                        <i class="fa fa-mars"></i>Homme
-                    </label>
+                    <!--<label for="homme"><input type="radio" id="homme" name="genre" value="Homme" required><i class="fa fa-mars"></i>Homme</label>                    <label for="femme"><input type="radio" id="femme" name="genre" value="Femme" required><i class="fa fa-venus"></i>Femme</label>-->                   
+                    <label for="chromosome" class="w3-text-gray">Sexe <i class="fas fa-venus-mars" aria-hidden="true"></i></label><br>
+                    <select id="chromosome" name="chromosome" aria-labelledby="chromosome-label">
+                        <option value="XX" title="Female, Woman" aria-label="Female, Woman">Female 👩 ♀️</option>
+                        <option value="XY" title="Male, Man" aria-label="Male, Man">Male 👨 ♂️</option>
+                    </select>
                 </div>
-
-                <div class="w3-card w3-round w3-theme-l3 w3-margin-top w3-padding-small">
+                
+                <div class="w3-card w3-round w3-theme-l5 w3-margin-top w3-padding-small">
                     <label for="height">Taille :</label><input type="number" id="height" name="height" class="w3-border" value="172" required>cm<br>
                     <label for="weight">Poids :</label><input type="number" id="weight" name="weight" class="w3-border" value="70" required>kg<br>
                     <select id="activity-level" name="activity-level" required>
@@ -355,28 +359,28 @@
                         <option value="1.55">Actif (3-5 exercices/semaine)</option>
                         <option value="1.725">Très actif (Exercice quotidien)</option>
                         <option value="1.9">Extrêmement actif (Travail physique/sport)</option>
-                    </select><hr>
+                    </select>
 
                     <!--(Role:16)-->
                     <select id="mbti-select" class="w3-theme-l5">
+                        <option value="ISTJ">ISTJ 📚</option>
+                        <option value="ISFP">ISFP 🎨</option>
+                        <option value="ESTP">ESTP ⚡</option>
+                        <option value="ENTJ">ENTJ 🎯</option>
                         <option value="INTP">INTP 🔍</option>
                         <option value="ESTJ">ESTJ 📊</option>
                         <option value="ESFJ">ESFJ 💖</option>
-                        <option value="ISTJ">ISTJ 📚</option>
                         <option value="ISFJ">ISFJ 🌼</option>
                         <option value="INFJ">INFJ 🌟</option>
                         <option value="INTJ">INTJ 🧠</option>
                         <option value="ISTP">ISTP 🛠️</option>
-                        <option value="ISFP">ISFP 🎨</option>
                         <option value="INFP">INFP 💭</option>
-                        <option value="ESTP">ESTP ⚡</option>
                         <option value="ESFP">ESFP 🎉</option>
                         <option value="ENFP">ENFP 🌈</option>
                         <option value="ENTP">ENTP 💡</option>
                         <option value="ENFJ">ENFJ 🌍</option>
-                        <option value="ENTJ">ENTJ 🎯</option>
                     </select>
-                    <a href="https://www.16personalities.com/fr/test-de-personnalite" style="text-decoration: none;" class="w3-card w3-padding w3-red w3-right">Personnalite ▶</a>
+                    <a href="https://www.16personalities.com/fr/test-de-personnalite" style="text-decoration: none;" class="w3-card w3-round w3-padding w3-red w3-right">Personnalite ▶</a>
                 </div>
 
                 
@@ -447,103 +451,37 @@
                 <span class="w3-tag w3-small w3-theme-l5">Photos</span>
 
                 <!--DNA🧬-->
-                <i class="fas fa-dna w3-tag " title="Genetics"></i> <!-- Chromosome 1 -->
-                <i class="fas fa-brain w3-tag" title="Intelligence"></i> <!-- Chromosome 2 -->
-                <i class="fas fa-eye w3-tag" title="Vision"></i> <!-- Chromosome 3 -->
-                <i class="fas fa-dumbbell w3-tag" title="Strength"></i> <!-- Chromosome 4 -->
-                <i class="fas fa-baby w3-tag" title="Youth"></i> <!-- Chromosome 5 -->
-                <i class="fas fa-shield-alt w3-tag" title="Protection"></i> <!-- Chromosome 6 -->
-                <i class="fas fa-ruler w3-tag" title="Measurement"></i> <!-- Chromosome 7 -->
-                <i class="fas fa-heartbeat w3-tag" title="Health"></i> <!-- Chromosome 8 -->
-                <i class="fas fa-cogs w3-tag" title="Complexity"></i> <!-- Chromosome 9 -->
-                <i class="fas fa-seedling w3-tag" title="Growth"></i> <!-- Chromosome 10 -->
-                <i class="fas fa-lungs w3-tag" title="Respiration"></i> <!-- Chromosome 11 -->
-                <i class="fas fa-dna w3-tag" title="Genetics"></i> <!-- Chromosome 12 -->
-                <i class="fas fa-ribbon w3-tag" title="Decoration"></i> <!-- Chromosome 13 -->
-                <hr>
-                <div id="chromosomes-grid" class="grid-container w3-card"><!--Les chromosomes sont ajoutés ici par JavaScript--></div>
-
-                <i class="fas fa-shield-virus w3-tag" title="Immunity"></i> <!-- Chromosome 14 -->
-                <i class="fas fa-brain w3-tag" title="Intelligence"></i> <!-- Chromosome 15 -->
-                <i class="fas fa-bacon w3-tag" title="Delicious"></i> <!-- Chromosome 16 -->
-                <i class="fas fa-dna w3-tag" title="Genetics"></i> <!-- Chromosome 17 -->
-                <i class="fas fa-child w3-tag" title="Offspring"></i> <!-- Chromosome 18 -->
-                <i class="fas fa-pills w3-tag" title="Medicine"></i> <!-- Chromosome 19 -->
-                <i class="fas fa-shield-alt w3-tag" title="Protection"></i> <!-- Chromosome 20 -->
-                <i class="fas fa-heart w3-tag" title="Love"></i> <!-- Chromosome 21 -->
-                <i class="fas fa-shield-virus w3-tag" title="Immunity"></i> <!-- Chromosome 22 -->
-                <i class="fas fa-venus-mars w3-tag"></i> <!--Chromosome Y-->
+                <i class="fas fa-dna w3-tag " title="Genetics"></i>
+                <i class="fas fa-brain w3-tag" title="Intelligence"></i>
+                <i class="fas fa-eye w3-tag" title="Vision"></i>
+                <i class="fas fa-dumbbell w3-tag" title="Strength"></i>
+                <i class="fas fa-baby w3-tag" title="Youth"></i>
+                <i class="fas fa-shield-alt w3-tag" title="Protection"></i>
+                <i class="fas fa-ruler w3-tag" title="Measurement"></i>
+                <i class="fas fa-heartbeat w3-tag" title="Health"></i>
+                <i class="fas fa-cogs w3-tag" title="Complexity"></i>
+                <i class="fas fa-seedling w3-tag" title="Growth"></i>
+                <i class="fas fa-lungs w3-tag" title="Respiration"></i>
+                <i class="fas fa-dna w3-tag" title="Genetics"></i>
+                <i class="fas fa-ribbon w3-tag" title="Decoration"></i>
+                <br>
+                <i class="fas fa-shield-virus w3-tag" title="Immunity"></i>
+                <i class="fas fa-brain w3-tag" title="Intelligence"></i>
+                <i class="fas fa-bacon w3-tag" title="Delicious"></i>
+                <i class="fas fa-dna w3-tag" title="Genetics"></i>
+                <i class="fas fa-child w3-tag" title="Offspring"></i>
+                <i class="fas fa-pills w3-tag" title="Medicine"></i>
+                <i class="fas fa-shield-alt w3-tag" title="Protection"></i>
+                <i class="fas fa-heart w3-tag" title="Love"></i>
+                <i class="fas fa-shield-virus w3-tag" title="Immunity"></i>
+                <i class="fas fa-venus-mars w3-tag"></i>
 
             </p>
 
             </div>
         </footer>
 
-        <footer class="w3-container w3-hide w3-theme-d2 w3-padding-16"><!--[RÉSERVE]-->
-            <h5>Inventaire</h5>
-                <div id="coicop-section">
-                    <h2>Dépenses</h2><!--Dépenses COICOP (TOTAL = 12)--> <!--ADD COULEURS Rareté item (exemple : legendaire, violet, bleu, vert, blanc, gris-->
-                    <table id="coicop-table">
-                        <thead>
-                            <tr>
-                                <th>Catégorie</th>
-                                <th>Dépenses (%)</th>
-                            </tr>
-                        </thead>
-                            <tbody>
-                                <tr>
-                                    <td><i class="fas fa-utensils icon"></i> 1. Alimentation et boissons non alcoolisées</td>
-                                    <td class="epic">10%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-wine-bottle icon"></i> 2. Boissons alcoolisées, tabac et narcotiques</td>
-                                    <td class="common">5%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-tshirt icon"></i> 3. Articles d'habillement et chaussures</td>
-                                    <td class="rare">8%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-home icon"></i> 4. Logement, eau, électricité, gaz et autres combustibles</td>
-                                    <td class="artifact">25%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-couch icon"></i> 5. Ameublement, équipement ménager et entretien courant de la maison</td>
-                                    <td class="common">6%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-heartbeat icon"></i> 6. Santé</td>
-                                    <td class="uncommon">7%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-car icon"></i> 7. Transports</td>
-                                    <td class="legendary">13%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-phone icon"></i> 8. Communications</td>
-                                    <td class="poor">3%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-theater-masks icon"></i> 9. Loisirs et culture</td>
-                                    <td class="epic">10%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-graduation-cap icon"></i> 10. Éducation</td>
-                                    <td class="uncommon">5%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-concierge-bell icon"></i> 11. Restaurants et hôtels</td>
-                                    <td class="common">5%</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-gifts icon"></i> 12. Biens et services divers</td>
-                                    <td class="common">4%</td>
-                                </tr>
-                            </tbody>
-                    </table>
-                    <br>
-                </div>
-        </footer>
+
 
 
 </body>

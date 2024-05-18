@@ -22,6 +22,7 @@
                 "fa-shield-alt",    // Chromosome 20
                 "fa-heart",         // Chromosome 21
                 "fa-shield-virus",  // Chromosome 22
+                "fa-venus-mars",    // Chromosome 23
                 "fa-venus",         // Chromosome X
                 "fa-mars"           // Chromosome Y
             ];
@@ -37,7 +38,7 @@
                     <i class="fas ${chromosome.icon}"></i>
                     <div>${chromosome.name}${defaultValues[index]}</div>
                 `;
-                chromosomesGrid.appendChild(gridItem);
+                //Add22 chromosomesGrid.appendChild(gridItem);
             });
 
             // Add the 23rd chromosome selector
@@ -50,9 +51,8 @@
                     <option value="XY" title="Y🚹👨">♂️</option>
                 </select>
             `;
-            chromosomesGrid.appendChild(chromosome23Item);
+            //Add+Chr23 chromosomesGrid.appendChild(chromosome23Item);
 
-            const mbForm = document.getElementById('mb-form');
             const dob = document.getElementById('dob');
             const weight = document.getElementById('weight');
             const height = document.getElementById('height');
@@ -95,10 +95,6 @@
                 const diffMs = Date.now() - new Date(dob).getTime();
                 const ageDate = new Date(diffMs);
                 return Math.abs(ageDate.getUTCFullYear() - 1970);
-            }
-
-            function loginWith(provider) {
-                alert(`Login avec ${provider} simulé.`);
             }
 
             const ctx = document.getElementById('myChart').getContext('2d');
@@ -227,116 +223,116 @@
                 };
                 const mbtiInfo = {
                     "ISTJ": {
-                        "functionAux": "Extraverted Thinking",
-                        "functionPrimary": "Introverted Sensing",
-                        "demographic": "11.6%",
-                        "subtype": "Logistician",
-                        "nickname": "Inspector"
+                        "functionAux": "Pensée extravertie",
+                        "functionPrimary": "Sensation introvertie",
+                        "demographic": "11,6%",
+                        "subtype": "Logisticien",
+                        "nickname": "Inspecteur"
                     },
                     "ISFJ": {
-                        "functionAux": "Extraverted Feeling",
-                        "functionPrimary": "Introverted Sensing",
-                        "demographic": "13.8%",
-                        "subtype": "Defender",
-                        "nickname": "Protector"
+                        "functionAux": "Sentiment extraverti",
+                        "functionPrimary": "Sensation introvertie",
+                        "demographic": "13,8%",
+                        "subtype": "Défenseur",
+                        "nickname": "Protecteur"
                     },
                     "INFJ": {
-                        "functionAux": "Extraverted Feeling",
-                        "functionPrimary": "Introverted Intuition",
-                        "demographic": "1.5%",
-                        "subtype": "Advocate",
-                        "nickname": "Mystic"
+                        "functionAux": "Sentiment extraverti",
+                        "functionPrimary": "Intuition introvertie",
+                        "demographic": "1,5%",
+                        "subtype": "Avocat",
+                        "nickname": "Mystique"
                     },
                     "INTJ": {
-                        "functionAux": "Extraverted Thinking",
-                        "functionPrimary": "Introverted Intuition",
-                        "demographic": "2.1%",
-                        "subtype": "Architect",
-                        "nickname": "Mastermind"
+                        "functionAux": "Pensée extravertie",
+                        "functionPrimary": "Intuition introvertie",
+                        "demographic": "2,1%",
+                        "subtype": "Architecte",
+                        "nickname": "Maître de la stratégie"
                     },
                     "ISTP": {
-                        "functionAux": "Extraverted Sensing",
-                        "functionPrimary": "Introverted Thinking",
-                        "demographic": "5.4%",
-                        "subtype": "Virtuoso",
-                        "nickname": "Craftsman"
+                        "functionAux": "Sensation extravertie",
+                        "functionPrimary": "Pensée introvertie",
+                        "demographic": "5,4%",
+                        "subtype": "Virtuose",
+                        "nickname": "Artisan"
                     },
                     "ISFP": {
-                        "functionAux": "Extraverted Sensing",
-                        "functionPrimary": "Introverted Feeling",
-                        "demographic": "8.8%",
-                        "subtype": "Adventurer",
-                        "nickname": "Artist"
+                        "functionAux": "Sensation extravertie",
+                        "functionPrimary": "Sentiment introverti",
+                        "demographic": "8,8%",
+                        "subtype": "Aventurier",
+                        "nickname": "Artiste"
                     },
                     "INFP": {
-                        "functionAux": "Extraverted Intuition",
-                        "functionPrimary": "Introverted Feeling",
-                        "demographic": "4.4%",
-                        "subtype": "Mediator",
-                        "nickname": "Dreamer"
+                        "functionAux": "Intuition extravertie",
+                        "functionPrimary": "Sentiment introverti",
+                        "demographic": "4,4%",
+                        "subtype": "Médiateur",
+                        "nickname": "Rêveur"
                     },
                     "INTP": {
-                        "functionAux": "Extraverted Intuition",
-                        "functionPrimary": "Introverted Thinking",
-                        "demographic": "3.3%",
-                        "subtype": "Logician",
-                        "nickname": "Thinker"
+                        "functionAux": "Intuition extravertie",
+                        "functionPrimary": "Pensée introvertie",
+                        "demographic": "3,3%",
+                        "subtype": "Logicien",
+                        "nickname": "Penseur"
                     },
                     "ESTP": {
-                        "functionAux": "Introverted Thinking",
-                        "functionPrimary": "Extraverted Sensing",
-                        "demographic": "4.3%",
+                        "functionAux": "Pensée introvertie",
+                        "functionPrimary": "Sensation extravertie",
+                        "demographic": "4,3%",
                         "subtype": "Entrepreneur",
-                        "nickname": "Dynamo"
+                        "nickname": "Dynamique"
                     },
                     "ESFP": {
-                        "functionAux": "Introverted Feeling",
-                        "functionPrimary": "Extraverted Sensing",
-                        "demographic": "8.5%",
-                        "subtype": "Entertainer",
-                        "nickname": "Performer"
+                        "functionAux": "Sentiment introverti",
+                        "functionPrimary": "Sensation extravertie",
+                        "demographic": "8,5%",
+                        "subtype": "Animateur",
+                        "nickname": "Artiste de la scène"
                     },
                     "ENFP": {
-                        "functionAux": "Introverted Feeling",
-                        "functionPrimary": "Extraverted Intuition",
-                        "demographic": "8.1%",
-                        "subtype": "Campaigner",
+                        "functionAux": "Sentiment introverti",
+                        "functionPrimary": "Intuition extravertie",
+                        "demographic": "8,1%",
+                        "subtype": "Mobilisateur",
                         "nickname": "Champion"
                     },
                     "ENTP": {
-                        "functionAux": "Introverted Thinking",
-                        "functionPrimary": "Extraverted Intuition",
-                        "demographic": "3.2%",
-                        "subtype": "Debater",
-                        "nickname": "Visionary"
+                        "functionAux": "Pensée introvertie",
+                        "functionPrimary": "Intuition extravertie",
+                        "demographic": "3,2%",
+                        "subtype": "Débateur",
+                        "nickname": "Visionnaire"
                     },
                     "ESTJ": {
-                        "functionAux": "Introverted Sensing",
-                        "functionPrimary": "Extraverted Thinking",
-                        "demographic": "8.7%",
-                        "subtype": "Executive",
-                        "nickname": "Supervisor"
+                        "functionAux": "Sensation extravertie",
+                        "functionPrimary": "Pensée introvertie",
+                        "demographic": "8,7%",
+                        "subtype": "Cadre",
+                        "nickname": "Superviseur"
                     },
                     "ESFJ": {
-                        "functionAux": "Introverted Sensing",
-                        "functionPrimary": "Extraverted Feeling",
-                        "demographic": "12.3%",
-                        "subtype": "Consul",
-                        "nickname": "Provider"
+                        "functionAux": "Sensation extravertie",
+                        "functionPrimary": "Sentiment introverti",
+                        "demographic": "12,3%",
+                        "subtype": "Conseiller",
+                        "nickname": "Fournisseur"
                     },
                     "ENFJ": {
-                        "functionAux": "Introverted Intuition",
-                        "functionPrimary": "Extraverted Feeling",
-                        "demographic": "2.5%",
-                        "subtype": "Protagonist",
-                        "nickname": "Teacher"
+                        "functionAux": "Intuition extravertie",
+                        "functionPrimary": "Sentiment introverti",
+                        "demographic": "2,5%",
+                        "subtype": "Protagoniste",
+                        "nickname": "Enseignant"
                     },
                     "ENTJ": {
-                        "functionAux": "Introverted Intuition",
-                        "functionPrimary": "Extraverted Thinking",
-                        "demographic": "1.8%",
-                        "subtype": "Commander",
-                        "nickname": "Fieldmarshal"
+                        "functionAux": "Intuition extravertie",
+                        "functionPrimary": "Pensée extravertie",
+                        "demographic": "1,8%",
+                        "subtype": "Commandant",
+                        "nickname": "Maréchal de champ"
                     }
                 };
 
@@ -345,11 +341,10 @@
 
                 const info = mbtiInfo[selectedType];
                 const infoHtml = `
-                    <p><strong>Fréquence démographique :</strong> ${info.demographic}</p>
-                    <p><strong>Sous-tempérament :</strong> ${info.subtype}</p>
-                    <p><strong>Fonction principale :</strong> ${info.functionPrimary}</p>
-                    <p><strong>Fonction auxiliaire :</strong> ${info.functionAux}</p>
-                    <p><strong>Surnom :</strong> ${info.nickname}</p>                
+                    <p><b>${info.subtype}</b> <i>${info.nickname}</i></p>
+                    <div><b>${info.functionPrimary}</b> <small class="w3-text-gray">Fonction principale</small></div>
+                    <div><b>${info.functionAux}</b> <small class="w3-text-gray">Fonction auxiliaire</small><div>
+                    <p><b>${info.demographic}</b> <small class="w3-text-gray">Fréquence démographique</small></p>
                 `;
                 document.getElementById('mbti-info').innerHTML = infoHtml;
             });
