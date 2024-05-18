@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MindFit Meta, Unlock Your True Self</title>
+    <title>Selfmeta, Unlock Your True Self</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <link rel="icon" type="image/png" href="https://i.gifer.com/6Dg.gif">
     <link rel="stylesheet" href="V0/style.css">
     <script src="V0/script.js"></script>
 
@@ -36,14 +37,7 @@
         <i class="epic">Boostez votre succès avec des données ! Mesurez, Analysez, Progressez.</i>
         </blockquote>
 
-        <div class="nav-buttons w3-hide">
-            <button class="w3-button w3-blue w3-margin-right" onclick="loginWith('Facebook')">
-                <i class="fab fa-facebook-f"></i> Login avec Facebook
-            </button>
-            <button class="w3-button w3-red w3-margin-right" onclick="loginWith('Google')">
-                <i class="fab fa-google"></i> Login avec Google
-            </button>
-        </div>
+
         <a href="https://modl.w3spaces.com/cognitive/biases.html" class="w3-button w3-green w3-margin-right w3-hide">
             <i class="fas fa-atom"></i> Cognitive
         </a>
@@ -124,7 +118,7 @@
         <br>
         
         <!-- Alert Box -->
-        <div class="w3-container w3-display-container w3-center w3-round w3-theme-l4 w3-border w3-theme-border w3-hide-small">
+        <div class="w3-container w3-display-container w3-center w3-round w3-theme-l4 w3-border w3-theme-border">
             <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
             <i class="fa fa-remove"></i>
             </span>
@@ -135,7 +129,7 @@
         </div>
 
 
-        <div class="w3-card w3-round w3-white w3-margin"><!--Voice to POST-->
+        <div class="w3-card w3-round w3-white w3-margin w3-hide-medium"><!--Voice to POST-->
             <div class="w3-container w3-padding">
             <h6 class="w3-opacity">Message to Luca</h6>
             <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
@@ -152,9 +146,17 @@
         <div class="w3-col m7">
         <div class="w3-row-padding">
             <div class="w3-center"><!--POMOdoro⌛-->
-                <canvas id="myChart"></canvas><!--[TIME] + Optimisation Habitudes/(31 D)-->
-                <iframe class="w3-round" src="https://flocus.com/minimalist-pomodoro-timer/" width="100%" height="315px" frameborder="0">pomodoro</iframe>
-                <iframe class="w3-hide-large" width="100%" height="315" src="https://www.youtube.com/embed/videoseries?si=BF75NmTCdUIcIDhe&amp;list=PL1nW8kmXdSU6zxdIV-tyekwCnxcVeDgqa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <canvas id="myChart"></canvas><!--[TIME] + Optimisation Habitudes/(31 D) + app.flocus-->
+
+                <iframe class="w3-round w3-card"
+                    src="https://flocus.com/minimalist-pomodoro-timer/"
+                    title="Flocus Pomodoro Timer" 
+                    style="width: 100%; height: 315px; border: 0;"
+                    allowfullscreen
+                >
+                    Votre navigateur ne supporte pas les iframes.
+                </iframe>
+
             </div>
 
         </div>
@@ -213,10 +215,6 @@
 
             </div>
             </div>
-        </div>
-        <div class="w3-container w3-border w3-row-padding" title="Espace">
-            <img class=" w3-round w3-center" src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
-            <p class="w3-hide"><button class="w3-button w3-block w3-theme-l4" title="Afficher les vols @Google @Skyscanner">Flights</button></p>
         </div>
 
         <div id="chromosomes-grid" class="grid-container w3-card"></div><!--Les chromosomes sont ajoutés ici par JavaScript-->
@@ -287,6 +285,8 @@
             </div>
         </div>
         
+        <iframe class="w3-hide-large" width="100%" height="315" src="https://www.youtube.com/embed/videoseries?si=BF75NmTCdUIcIDhe&amp;list=PL1nW8kmXdSU6zxdIV-tyekwCnxcVeDgqa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         <!-- End Right Column -->
         </div>
         
@@ -329,46 +329,46 @@
 
 
     <div id="metabolismModal" class="modal"><!--🔒☣️Bio métriques-->
-    
-        <div class="modal-content"><span title="🧪" class="close">&times;</span>
-            
+
+            <div class="modal-content"><span title="🧪" class="close">&times;</span>
+                
             <form id="mb-form" class="w3-container">
                     <!--<h2 title="Bio" contenteditable="true" class="w3-container w3-theme-l5 w3-margin-top w3-padding-16">🐲🍮  Pseudo :  ♔☹</h2>-->
-                <div class="w3-card w3-round w3-theme-l5 w3-padding">
+                <div class="w3-card w3-round w3-theme-l5 w3-padding-large">
                     <input type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
                     <input type="text" id="nom" name="nom" placeholder="Nom de famille" required><br>
                     <input type="text" id="contact" name="contact" placeholder="Numéro de mobile ou e-mail" required><br>
                     <input type="password" id="motdepasse" name="motdepasse" placeholder="Nouveau mot de passe" required><br>
-                    <label for="date_naissance" class="w3-text-gray">Date de naissance</label><br>
+                    <small for="date_naissance" class="w3-text-gray">Date de naissance</small><br>
                     <input type="date" id="dob" name="dob" required><br>
                     <!--<label for="homme"><input type="radio" id="homme" name="genre" value="Homme" required><i class="fa fa-mars"></i>Homme</label>                    <label for="femme"><input type="radio" id="femme" name="genre" value="Femme" required><i class="fa fa-venus"></i>Femme</label>-->                   
-                    <label for="chromosome" class="w3-text-gray">Sexe <i class="fas fa-venus-mars" aria-hidden="true"></i></label><br>
+                    <small for="chromosome" class="w3-text-gray">Sexe <i class="fas fa-venus-mars" aria-hidden="true"></i></small><br>
                     <select id="chromosome" name="chromosome" aria-labelledby="chromosome-label">
-                        <option value="XX" title="Female, Woman" aria-label="Female, Woman">Female 👩 ♀️</option>
-                        <option value="XY" title="Male, Man" aria-label="Male, Man">Male 👨 ♂️</option>
+                        <option value="XX" title="Female, Woman" aria-label="Female, Woman ♀️">Female 👩</option>
+                        <option value="XY" title="Male, Man" aria-label="Male, Man ♂️">Male 👨</option>
                     </select>
+                    <div class="w3-margin-top w3-hide-large">
+                        <button class="w3-button w3-blue w3-margin-right" onclick="return login('facebook')">
+                            <i class="fab fa-facebook-f" alt="Facebook"></i> Connexion Facebook
+                        </button>
+                        <button class="w3-button w3-red w3-margin-right" onclick="return login('google')">
+                            <i class="fab fa-google" alt="Google"></i> Accès rapide
+                        </button>
+                    </div><!--login🌐 Social Media-->
                 </div>
-                
-                <div class="w3-card w3-round w3-theme-l5 w3-margin-top w3-padding-small">
-                    <label for="height">Taille :</label><input type="number" id="height" name="height" class="w3-border" value="172" required>cm<br>
-                    <label for="weight">Poids :</label><input type="number" id="weight" name="weight" class="w3-border" value="70" required>kg<br>
-                    <select id="activity-level" name="activity-level" required>
-                        <option disabled>🏋🏻 Dépense énergétique</option>
-                        <option value="1.2">Sédentaire (Peu/pas d'exercice)</option>
-                        <option value="1.375">Légèrement actif (1-3 exercices/semaine)</option>
-                        <option value="1.55">Actif (3-5 exercices/semaine)</option>
-                        <option value="1.725">Très actif (Exercice quotidien)</option>
-                        <option value="1.9">Extrêmement actif (Travail physique/sport)</option>
-                    </select>
 
-                    <!--(Role:16)-->
-                    <select id="mbti-select" class="w3-theme-l5">
+                <br>
+
+                <div class="w3-card w3-round w3-center w3-theme-l5 w3-padding-small">
+
+                    <label for="mbti-select" class="w3-text-gray">Type </label>
+                    <select id="mbti-select" class="w3-round w3-hover-red">
+                        <option value="ENTJ">ENTJ 🎯</option>
+                        <option value="ESTJ">ESTJ 📊</option>
+                        <option value="INTP">INTP 🔍</option>
                         <option value="ISTJ">ISTJ 📚</option>
                         <option value="ISFP">ISFP 🎨</option>
                         <option value="ESTP">ESTP ⚡</option>
-                        <option value="ENTJ">ENTJ 🎯</option>
-                        <option value="INTP">INTP 🔍</option>
-                        <option value="ESTJ">ESTJ 📊</option>
                         <option value="ESFJ">ESFJ 💖</option>
                         <option value="ISFJ">ISFJ 🌼</option>
                         <option value="INFJ">INFJ 🌟</option>
@@ -379,11 +379,26 @@
                         <option value="ENFP">ENFP 🌈</option>
                         <option value="ENTP">ENTP 💡</option>
                         <option value="ENFJ">ENFJ 🌍</option>
+                    </select><!--16 Types (MBTI)-->
+                    <button style="text-decoration: none;" class="w3-card w3-round w3-padding w3-red w3-margin-top" onclick="window.open('https://www.16personalities.com/fr/test-de-personnalite')">Personnalité ▶</button>
+                    <hr>
+
+                    <!--métabolique de base (MB)-->
+                    <label for="height" class="w3-text-gray">Taille </label><input type="number" id="height" name="height" placeholder="Entrez votre taille en cm" value="172" required><br>
+                    <label for="weight" class="w3-text-gray">Poids </label><input type="number" id="weight" name="weight" placeholder="Entrez votre poids en kg" value="69" required><br>
+                    <!--(Activity*Exp)-->
+                    <select id="activity-level" name="activity🏋🏻*EXP" required>
+                        <option value="1.2">Sédentaire (Peu ou pas d'exercice)</option>
+                        <option value="1.375">Légèrement actif (1 à 3 séances d'exercice par semaine)</option>
+                        <option value="1.55">Actif (3 à 5 séances d'exercice par semaine)</option>
+                        <option value="1.725">Très actif (Exercice quotidien)</option>
+                        <option value="1.9">Extrêmement actif (Travail physique intense ou pratique sportive fréquente)</option>
                     </select>
-                    <a href="https://www.16personalities.com/fr/test-de-personnalite" style="text-decoration: none;" class="w3-card w3-round w3-padding w3-red w3-right">Personnalite ▶</a>
                 </div>
 
-                
+
+
+
                 <form>
                     <table class="w3-card w3-hide">
                     <tr>
